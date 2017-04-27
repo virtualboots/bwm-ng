@@ -53,6 +53,18 @@ number of platforms.
 INSTALL
 =======
 
+The build system assumes automake. If this is not installed yet, install with
+
+sudo apt-get install autoconf automake libtool
+
+The configure file only appears after executing autogen.sh, which seems to be a wrapper of configure.
+Execute the below command to proceed. Static is required if one needs to use this at other machine.
+
+./autogen.sh CFLAGS=-static CXXFLAGS=-static
+make
+
+Once the configure file is generated, one can also follows the instructions below instead.
+
 For detailed decription please read INSTALL
 ./configure --help for a list of options
 
